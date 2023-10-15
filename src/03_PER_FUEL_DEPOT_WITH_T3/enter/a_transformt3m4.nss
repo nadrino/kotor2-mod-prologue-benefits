@@ -1,17 +1,23 @@
 
+// This script is executed every time we load the hangar area
+// The if condition will check if it's the first time we load the map
+
+// The goal here is to save the initial XP of T3 in 001EBO_End variable
+// This value will be used as a baseline to deduce how much has been earn during this section of the game
+
 void main();
 
 void _start() {
-	main();
-	return;
+  main();
+  return;
 }
 
 void main() {
 
 
-	if (GetIsPC(GetEnteringObject()) && GetGlobalBoolean("PER_TURNINTO_T3M4")) {
-		SetGlobalBoolean("PER_TURNINTO_T3M4", 0);
-  	SwitchPlayerCharacter(NPC_T3_M4);
+  if (GetIsPC(GetEnteringObject()) && GetGlobalBoolean("PER_TURNINTO_T3M4")) {
+    SetGlobalBoolean("PER_TURNINTO_T3M4", 0);
+    SwitchPlayerCharacter(NPC_T3_M4);
 
     // Save XP obtained by T3 here: should be around 400PX
     // Global numbers appears to be saved as a "signed char" (8bits) which means it can go within -128 and +127
@@ -33,8 +39,8 @@ void main() {
     // store the value
     SetGlobalNumber("001EBO_End", currentXp);
 
-  	SetGlobalFadeIn(0., 2., 0., 0., 0.);
-	}
+    SetGlobalFadeIn(0., 2., 0., 0., 0.);
+  }
 
   return;
 }

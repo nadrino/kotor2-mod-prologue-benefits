@@ -1,17 +1,27 @@
 // Decompiled using ncsdecomp
+
+// This script is executed when T3 reach the console to open the door (101PER_Open_Hatch) for the Exile.
+
+// The goal here is to save the XP earn during this section of the game by T3
+// In the original version (TSLRCM as well) this XP is lost.
+
+// Finally we want to temporarily store the inventory of T3 in a container:
+// "ComputerPanel" aka the computer we just interacted with.
+
+// These items will be retrieved when T3 will join the party of the Exile later in the game.
+
+
 void main();
 
 void _start() {
-	main();
-	return;
+  main();
+  return;
 }
 
 void main() {
 
   // The original script does:
-	SetGlobalNumber("103PER_T3_Ambush", 1);
-
-  // Save lost XP obtained by T3 here
+  SetGlobalNumber("103PER_T3_Ambush", 1);
 
   // begining XP was saved with "a_transformt3m4.nss"
   int beginXp = ( GetGlobalNumber("001EBO_End") + 128 ) * 10;

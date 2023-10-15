@@ -1,15 +1,21 @@
 // Decompiled using ncsdecomp
+
+// This script is executed when T3 is joining the party in the Fuel area
+
+// Here we want to merge T3 inventory we previously stored in the Fuel console into the party one.
+
+
 void main();
 
 void _start() {
-	main();
-	return;
+  main();
+  return;
 }
 
 void main() {
-	AurPostString("Adding T3M4 to party...", 5, 5, 5.);
+  AurPostString("Adding T3M4 to party...", 5, 5, 5.);
 
-	ClearAllEffects();
+  ClearAllEffects();
 
   // AssignCommand(GetObjectByTag("T3M4", 0), );
 

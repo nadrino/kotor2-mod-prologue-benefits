@@ -1,13 +1,20 @@
 // Decompiled using ncsdecomp
+
+// This script is executed just before we take control of the Exile after T3 has open the hatch
+
+// Now we want the exile to get back his original inventory we stored in the admin console
+// We also give the XP we earn with T3 section
+
+
 void main();
 
 void _start() {
-	main();
-	return;
+  main();
+  return;
 }
 
 void main() {
-	SetGlobalNumber("101PER_Open_Hatch", 1);
+  SetGlobalNumber("101PER_Open_Hatch", 1);
 
   // Give back our previous inventory that we stored inside the admin console
   object exileStorage = GetObjectByTag("Adm_Console");

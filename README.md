@@ -23,11 +23,13 @@ folder of your game.
 
 ## Tested game versions
 
-- PC (Original & Steam)
-- Macos
-- Nintendo Switch (`tpc` version)
-- iOS (`tga` version)
-- XBox
+| Platform        | Running |
+|-----------------|---------|
+| PC              | ✅️      |
+| MacOS           | ✅       |
+| Nintendo Switch | ✅       |
+| iOS             | ?       |
+| XBox            | ?       |
 
 
 ## Screenshots
